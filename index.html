@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors Battle</title>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- title area -->
+        <div class="row mt-5">
+            <div class="col">
+                <h1 class="text-center">Rock Paper Scissors</h1>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- player name input area-->
+        <div class="row">
+            <div col="col my-3">
+                <form>
+                    <div class="form-group">
+                        <label for="player-name">Enter Your Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- instruction area-->
+        <div class="row mt-3">
+            <div class="col">
+                <p id="instructions">where instructions go</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- player battle area-->
+        <div class="row my-5 text-center">
+            <div class="col-4 text-center" id="player-one-info">
+                <p id="player-one-status">left player</p>
+            </div>
+
+            <div class="col-4 text-center" id="outcome">
+                <p>middle info</p>
+            </div>
+
+            <div class="col-4 text-center" id="player-two-info">
+                <p id="player-two-status">right player</p>
+            </div>
+
+        </div>
+        <hr>
+        <!-- player chat area-->
+        <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="player-chat"></label>
+                <input type="chat" class="form-control" id="chat-input" aria-describedby="enterchat">
+            </div>
+            <button type="submit" class="btn btn-primary" id="chat-submit">Submit</button>
+        </form>
+
+    </div>
+
+
+
+
+
+
+    <!-- Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAfPQxr4tVQL-3mem2tZ4YdjaBz3NA8nrg",
+            authDomain: "rps-battle-cf1d8.firebaseapp.com",
+            databaseURL: "https://rps-battle-cf1d8.firebaseio.com",
+            projectId: "rps-battle-cf1d8",
+            storageBucket: "",
+            messagingSenderId: "669111992170"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+
+</html>
